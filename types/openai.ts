@@ -14,6 +14,7 @@ export enum OpenAIModelID {
   GPT_4_32K = 'gpt-4-32k',
   GPT_4_1106_PREVIEW = 'gpt-4-1106-preview',
   GPT_4_0125_PREVIEW = 'gpt-4-0125-preview', // gpt-4-turbo-preview currently points to gpt-4-0125-preview.
+  GPT_4_TURBO_2024_04_09 = 'gpt-4-turbo-2024-04-09', // gpt-4-turbo currently points to gpt-4-turbo-2024-04-09.
 }
 
 // in case the `DEFAULT_MODEL` environment variable is not set or set to an unsupported model
@@ -55,5 +56,12 @@ export const OpenAIModels: Record<OpenAIModelID, OpenAIModel> = {
     name: 'GPT-4-0125-PREVIEW',
     maxLength: 4096,
     tokenLimit: 128000,
-  }
+  },
+  [OpenAIModelID.GPT_4_TURBO_2024_04_09]: {
+    id: OpenAIModelID.GPT_4_TURBO_2024_04_09,
+    name: 'GPT-4-TURBO-2024-04-09',
+    maxLength: 4096,
+    tokenLimit: 128000,
+  },
+
 };
